@@ -1,6 +1,6 @@
 # TemplateBackEnd
 
-Projeto criado no Java Versão 8.0
+Projeto criado no Java Versão 8.0 com utilidade de base para outros projetos Java, Spring Boot, Maven, Yaml e Swagger.
 
 ## Build
 
