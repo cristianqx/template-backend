@@ -1,0 +1,67 @@
+swagger: '2.0'
+info:
+  description: >
+    Descricao das suas APIs
+    
+  version: 1.0.0
+  title: ApplicationAPI
+  termsOfService: TBD
+  contact:
+    email: dlab@dornelasit.com.br
+  license:
+    name: TBD
+    url: 'http://localhost:8081'
+host: localhost:8081
+basePath: /arqtype/v1
+tags:
+  - name: Pedido
+    description: Grupo de APIs de Pedidos.
+    externalDocs:
+      description: TBD
+      url: 'http://localhost:8081'
+schemes:
+  - http
+  - https
+  
+paths:
+  # Paths 
+  '/order':
+    post:
+      tags:
+        - Pedido
+      summary: Cria um novo pedido
+      description: ''
+      operationId: createOrder
+      consumes:
+        - application/json      
+      produces:
+        - application/json
+      parameters:
+      - in: "body"
+        name: "pedidoRessource"
+        description: "Objeto do pedido"
+        required: true
+        schema:
+          $ref: "#/definitions/Pedido"        
+      responses:
+        '200':
+          description: Operacao realizada com sucesso
+          
+        '400':
+          description: Bad Request - Pedido invalido  
+      
+# DEFINICOES DE OBJETOS
+definitions:
+  Pedido:
+    type: "object"
+    properties:
+      codigoPedido:
+        type: "integer"
+        format: "int64"
+      codigoSistema:
+        type: "integer"
+        format: "int64"
+
+externalDocs:
+  description: TBD
+  url: 'http://localhost:8081'
